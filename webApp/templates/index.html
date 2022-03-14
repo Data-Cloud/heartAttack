@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>Heart Attack|Risk Predictor</title>
+        <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    </head>
+    <body style="font-family: 'Redressed', cursive; font-family: 'Sorts Mill Goudy', serif;">
+        <div class="d-flex flex-column justify-content-center align-items-center">
+            <h2> Heart Attack Risk Prediction App.</h2>
+            <span> Plese input your details below and click the submit button to get a prediction for your health risk status.</span>
+        </div>
+        <div class="h-150 lg mb-3 container-fluid d-flex align-items-center p-2 justify-content-center">
+            <form action="/result" method="post" target="_blank" class="w-25 p-4 text-center rounded border border-2 my-3 border-dark shadow d-flex flex-column align-items-center justify-content-center">                
+                <input type="number" placeholder="Age" class="form-control m-2" name="age">
+                <input type="number" placeholder="Sex" class="form-control m-2" name="sex">
+                <input type="number" placeholder="Chest Pain Type" class="form-control m-2" name="chestPain">
+                <input type="number" placeholder="Resting B.P. (mmHg)" class="form-control m-2" name="restingBP">
+                <input type="number" placeholder="Cholesterol (mg/dl)" class="form-control m-2" name="cholesterol">
+                <input type="number" placeholder="Fasting Blood Sugar" class="form-control m-2" name="fastingBS">
+                <input type="number" placeholder="Resting Electro Cardiogram" class="form-control m-2" name="restingEC">
+                <input type="number" placeholder="Max heart rate achieved" class="form-control m-2" name="maxHeartRate">
+                <input type="number" placeholder="  Induced Anginal (0 or 1)" class="form-control m-2" name="inducedAnginal">
+                <input type="number" placeholder="Old Peak" class="form-control m-2" name="oldPeak">
+                <input type="number" placeholder="slp" class="form-control m-2" name="slp">
+                <input type="number" placeholder="Number of Major vessels" class="form-control m-2" name="majorVessels">
+                <input type="number" placeholder="thall" class="form-control m-2" name="thall">
+                <input  type="submit" value="Submit" class="btn btn-outline-success">
+            </form>
+        </div>
+
+        <span class="m-5">
+            <h4 style="font-weight:bold;">Important Meta-data before filling.</h4>
+                <ul>
+                    <li> Age : Age of the patient</li>
+                    <li>  Sex of the patient (0 for male, 1 for female)</li>
+                    <li>Exercise induced angina (1 = yes; 0 = no)</li>
+                    <li>Number of major vessels (0-3)</li>
+                     <li>Chest Pain type chest pain type: <br/>
+                            Value 1: typical angina <br/>
+                            Value 2: atypical angina <br/>
+                            Value 3: non-anginal pain
+                            Value 4: asymptomatic</li>
+                    <li>Resting blood pressure (in mm Hg)</li>
+                    <li>Cholestoral in mg/dl fetched via BMI sensor</li>
+                    <li>Fasting blood sugar > 120 mg/dl) (1 = true; 0 = false)</li>
+                    <li>
+                        Resting electrocardiographic results: <br/>
+                        Value 0: normal <br/>
+                        Value 1: having ST-T wave abnormality (T wave inversions and/or ST elevation or depression of > 0.05 mV) <br/>
+                        Value 2: showing probable or definite left ventricular hypertrophy by Estes' criteria
+                    </li>
+                    <li> Maximum heart rate achieved </li>
+                    <li style=" display: none;"> <a href="https://www.kaggle.com/rashikrahmanpritom/heart-attack-analysis-prediction-dataset"> More about the dataset can be found here</a></li>
+                </ul>
+        </span>
+    </body>
+</html>
